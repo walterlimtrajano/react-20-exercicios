@@ -15,6 +15,11 @@ import AnimalFavorito from "./components/AnimalFavorito";
 import GaleriaImagens from "./components/GaleriaImagens";
 import GaleriaPublica from "./components/GaleriaPublica";
 import ImagemCondicional2 from "./components/ImagemCondicional2";
+import ListaDeFrutas from "./components/ListaDeFrutas";
+import ContatoUsuario from "./components/ContatoUsuario";
+import Produto from "./components/Produto";
+import ListaProdutos from "./components/ListaProdutos";
+import MensagemNota from "./components/MensagemNota";
 
 import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
@@ -26,6 +31,15 @@ export default function App() {
     { titulo: "Interestelar", genero: "Ficção Científica", ano: 2014 },
     { titulo: "O Rei Leão", genero: "Animação", ano: 1994 },
   ];
+  const minhasFrutas = ["Banana", "Maçã", "Uva", "Manga"];
+  const meusProdutos = [
+    { nome: "Tênis Nike", preco: "499,90", categoria: "Calçados" },
+    { nome: "Smartphone Samsung", preco: "2.199,00", categoria: "Eletrônicos" },
+    { nome: "Fone Bluetooth", preco: "149,90", categoria: "Acessórios" },
+    { nome: "Livro React", preco: "89,90", categoria: "Livros" },
+  ];
+
+
   return (
     <div style={{ padding: 16 }}>
       <h1>Exercício 1 — Operações Aritméticas com Estilo</h1>
@@ -87,6 +101,41 @@ export default function App() {
       <ImagemCondicional2 tipoImagem="LOGO" />
       <ImagemCondicional2 tipoImagem="PERSONAGEM" />
       <ImagemCondicional2 tipoImagem="OUTRO" />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 11 — Renderização de Frutas</h1>
+      <ListaDeFrutas frutas={minhasFrutas} />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 12 — Contato de Usuário</h1>
+      <ContatoUsuario 
+        nome="Maria Silva" 
+        email="maria@email.com" 
+        telefone="(11) 99999-9999" 
+      />
+      <ContatoUsuario 
+        nome="João Souza" 
+        email="joao@email.com" 
+        telefone="(21) 98888-8888" 
+      />
+    </div>
+     <div style={{ padding: 16 }}>
+      <h1>Exercício 13 — Produto na Vitrine</h1>
+      <div style={{ display: "flex", gap: "20px" }}>
+        <Produto nome="Camisa Polo" preco="79,90" categoria="Roupas" />
+        <Produto nome="Notebook Dell" preco="3.999,00" categoria="Eletrônicos" />
+        <Produto nome="Cafeteira" preco="299,90" categoria="Eletrodomésticos" />
+      </div>
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 14 — Lista de Produtos</h1>
+      <ListaProdutos produtos={meusProdutos} />
+    </div>
+     <div style={{ padding: 16 }}>
+      <h1>Exercício 15 — Renderização com Nota</h1>
+      <MensagemNota nota={9} />
+      <MensagemNota nota={6} />
+      <MensagemNota nota={3} />
     </div>
     </div>
   );
