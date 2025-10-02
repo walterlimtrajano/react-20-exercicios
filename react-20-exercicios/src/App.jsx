@@ -10,6 +10,15 @@ import HorasParaSegundos from "./components/HorasParaSegundos";
 import SegundosParaHoras from "./components/SegundosParaHoras";
 import ListaDeFilmesDetalhados from "./components/ListaDeFilmesDetalhados";
 import MensagemClima from "./components/MensagemClima";
+import DesejoDoDia from "./components/DesejoDoDia";
+import AnimalFavorito from "./components/AnimalFavorito";
+import GaleriaImagens from "./components/GaleriaImagens";
+import GaleriaPublica from "./components/GaleriaPublica";
+import ImagemCondicional2 from "./components/ImagemCondicional2";
+
+import img1 from "./assets/img1.jpg";
+import img2 from "./assets/img2.jpg";
+import img3 from "./assets/img3.jpg";
 
 export default function App() {
   const meusFilmes = [
@@ -49,6 +58,35 @@ export default function App() {
       <MensagemClima tipoClima="chuva" />
       <MensagemClima tipoClima="nublado" />
       <MensagemClima tipoClima="neve" />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 6 — Desejo do Dia</h1>
+      <DesejoDoDia mensagem="Tenha um ótimo dia! 🌟" />
+      <DesejoDoDia mensagem="Estude bastante React hoje! ⚛️" />
+    </div>
+     <div style={{ padding: 16 }}>
+      <h1>Exercício 7 — Renderizar Animal Favorito</h1>
+      <AnimalFavorito animal="cachorro" />
+      <AnimalFavorito animal="gato" />
+      <AnimalFavorito animal="coelho" />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 8 — Galeria de Imagens</h1>
+      <GaleriaImagens img1={img1} img2={img2} img3={img3} />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 9 — Galeria Pública</h1>
+      <GaleriaPublica 
+        img1="/img1.jpg" 
+        img2="/img2.jpg" 
+        img3="/img3.jpg" 
+      />
+      </div>
+      <div style={{ padding: 16 }}>
+      <h1>Exercício 10 — Imagem Alternativa</h1>
+      <ImagemCondicional2 tipoImagem="LOGO" />
+      <ImagemCondicional2 tipoImagem="PERSONAGEM" />
+      <ImagemCondicional2 tipoImagem="OUTRO" />
     </div>
     </div>
   );
