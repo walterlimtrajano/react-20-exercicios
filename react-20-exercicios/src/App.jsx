@@ -20,6 +20,11 @@ import ContatoUsuario from "./components/ContatoUsuario";
 import Produto from "./components/Produto";
 import ListaProdutos from "./components/ListaProdutos";
 import MensagemNota from "./components/MensagemNota";
+import CorFavorita from "./components/CorFavorita";
+import SaudacaoHorario from "./components/SaudacaoHorario";
+import StatusConexao from "./components/StatusConexao";
+import NomeCompleto from "./components/NomeCompleto";
+import MensagemEmoji from "./components/MensagemEmoji";
 
 import img1 from "./assets/img1.jpg";
 import img2 from "./assets/img2.jpg";
@@ -136,6 +141,35 @@ export default function App() {
       <MensagemNota nota={9} />
       <MensagemNota nota={6} />
       <MensagemNota nota={3} />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 16 — Cores Preferidas</h1>
+      <CorFavorita cor="red" />
+      <CorFavorita cor="blue" />
+      <CorFavorita cor="green" />
+      <CorFavorita cor="#ff9800" />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 17 — Saudação com Horário</h1>
+      <SaudacaoHorario hora={9} />
+      <SaudacaoHorario hora={14} />
+      <SaudacaoHorario hora={20} />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 18 — Status de Conexão</h1>
+      <StatusConexao online={true} />
+      <StatusConexao online={false} />
+    </div>
+    <div style={{ padding: 16 }}>
+      <h1>Exercício 19 — Nome Completo</h1>
+      <NomeCompleto nome="Walterlim" sobrenome="Trajano" />
+      <NomeCompleto nome="Maria" sobrenome="Silva" />
+    </div>
+     <div style={{ padding: 16 }}>
+      <h1>Exercício 20 — Mensagem com Emoji</h1>
+      <MensagemEmoji mensagem="Estou animado" emoji="😄" />
+      <MensagemEmoji mensagem="Hora de estudar React" emoji="⚛️" />
+      <MensagemEmoji mensagem="Partiu descansar" emoji="😴" />
     </div>
     </div>
   );
